@@ -70,7 +70,7 @@ ADD_EXECUTABLE(btkODFParticleFilterTractography
         ${fbrain_SOURCE_DIR}/Code/Tractography/btkParticle.cxx
         ${fbrain_SOURCE_DIR}/Code/Tractography/btkParticleFilter.cxx
 )
-TARGET_LINK_LIBRARIES(btkODFParticleFilterTractography ${ITK_LIBRARIES} vtkHybrid)
+TARGET_LINK_LIBRARIES(btkODFParticleFilterTractography ${ITK_LIBRARIES} vtkHybrid mpl)
 
 INCLUDE_DIRECTORIES(${fbrain_SOURCE_DIR}/Code/DtiParticleFilteringTractography)
 
@@ -91,7 +91,7 @@ ADD_EXECUTABLE(btkTensorParticleFilterTractography
         ${fbrain_SOURCE_DIR}/Code/DtiParticleFilteringTractography/btkDTFPParticleFilter.cxx
 )
 
-TARGET_LINK_LIBRARIES(btkTensorParticleFilterTractography ${ITK_LIBRARIES} vtkHybrid)
+TARGET_LINK_LIBRARIES(btkTensorParticleFilterTractography ${ITK_LIBRARIES} vtkHybrid mpl)
 
 INCLUDE_DIRECTORIES(${fbrain_SOURCE_DIR}/Code/Tractography)
 INCLUDE_DIRECTORIES(${fbrain_SOURCE_DIR}/Code/InputOutput)
@@ -109,7 +109,7 @@ ADD_EXECUTABLE(btkODFStreamlineTractography
         ${fbrain_SOURCE_DIR}/Code/Tractography/btkSHModel.cxx
         ${fbrain_SOURCE_DIR}/Code/Tractography/btkSHModelEstimator.cxx
 )
-TARGET_LINK_LIBRARIES(btkODFStreamlineTractography ${ITK_LIBRARIES} vtkHybrid)
+TARGET_LINK_LIBRARIES(btkODFStreamlineTractography ${ITK_LIBRARIES} vtkHybrid mpl)
 
 INCLUDE_DIRECTORIES(${fbrain_SOURCE_DIR}/Code/DtiParticleFilteringTractography)
 
@@ -125,7 +125,7 @@ ADD_EXECUTABLE(btkTensorStreamlineTractography
         ${fbrain_SOURCE_DIR}/Code/Tractography/btkSphericalHarmonics.cxx
 )
 
-TARGET_LINK_LIBRARIES(btkTensorStreamlineTractography ${ITK_LIBRARIES} vtkHybrid)
+TARGET_LINK_LIBRARIES(btkTensorStreamlineTractography ${ITK_LIBRARIES} vtkHybrid mpl)
 
 INSTALL(TARGETS btkODFParticleFilterTractography
                 btkODFStreamlineTractography
